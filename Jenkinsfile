@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Fikret Building..'
-                nodejs(''){
+                nodejs('Node-18.18.2'){
                     sh 'yarn install'
                     sh 'yarn run test'
                 }
