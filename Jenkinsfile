@@ -5,6 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Fikret Building..'
+                nodejs(''){
+                    sh 'yarn install'
+                    sh 'yarn run test'
+                }
             }
         }
         stage('Test') {
