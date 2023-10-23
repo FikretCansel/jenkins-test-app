@@ -6,8 +6,8 @@ pipeline {
             steps {
                 echo 'Fikret Building..'
                 nodejs('Node-18.18.2'){
-                    sh 'yarn install'
-                    sh 'yarn run test'
+                    sh 'npm install'
+                    sh 'npm run test'
                 }
             }
         }
