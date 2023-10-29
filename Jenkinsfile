@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sshagent(['ssh-agent']){
-                    sh 'ssh -tt -o StrictHostKeyChecking=no fikretcnsl@95.173.186.111 cd jenkins-test-app git pull origin main'
+                    sh 'ssh -tt -o StrictHostKeyChecking=no fikretcnsl@95.173.186.111 cd jenkins-test-app && git pull origin main'
                 }
             }
         }
