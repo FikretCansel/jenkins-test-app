@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sshagent(['ssh-agent']){
-                    sh 'ls -a'
+                    sh 'ssh -tt -o StrictHostKeyChecking=no fikretcnsl@95.173.186.111 ls'
                 }
             }
         }
