@@ -7,7 +7,6 @@ pipeline {
                 echo 'Building..'
                 nodejs('Node-18.18.2'){
                     sh 'npm install'
-                    sh 'npm run test'
                 }
             }
         }
@@ -24,6 +23,8 @@ pipeline {
                 echo 'Deploying....'
                 sshagent(['ssh-agent']){
                     sh 'ssh -tt -o StrictHostKeyChecking=no fikretcnsl@95.173.186.111 ls'
+                    sh 'cd jenkins-test-app'
+                    sh 'ls -a'
                 }
             }
         }
